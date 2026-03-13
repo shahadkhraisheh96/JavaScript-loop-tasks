@@ -114,3 +114,122 @@ for(let i=0;i<=text.length-1;i++){
 document.writeln("count of c in Orange Coding School="+charcount);
 document.writeln("<br><br>");
 
+//11Write a program that prints the multiplication table from 1 to 5 using nested loops.
+let multiplication=1;
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=5;j++){
+        multiplication=i*j;
+        document.writeln(i +" * "+j+" = "+multiplication+"     " );
+
+    }
+    document.writeln("<br><br>");
+}
+
+//12Write a program to generate and display the Floyd Triangle.
+let FloydTriangle=1;
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        document.writeln(FloydTriangle +" ");
+        FloydTriangle++;
+    }
+    document.writeln("<br>");
+}
+   document.writeln("<br><br>");
+
+//13 Write a program that prints all numbers between 1 and 100 that are divisible by 7.
+for (let i = 1; i <= 100; i++) {
+    if (i % 7 === 0) {
+        document.writeln(i);
+    }
+}
+ document.writeln("<br><br>");
+
+//14Write a program that prints the sum of all odd numbers between 1 and 100 using a loop.
+let sumOffOod=0;
+for(let i=1;i<=100;i++){
+    if(i%2!=0){
+        sumOffOod+=i;
+    }
+}document.writeln(sumOffOod);
+ document.writeln("<br><br>");
+
+ //15Write a program that prints the square of numbers from 1 to 10 using a loop.
+ for(let i=1;i<=10;i++){
+    document.writeln((i*i));
+ }
+  document.writeln("<br><br>");
+
+  //16Write a program that prints numbers from **1 to 30**, but:
+// print **"Fizz"** for multiples of 3
+//print **"Buzz"** for multiples of 5
+//print **"FizzBuzz"** for multiples of both
+ for(let i=1;i<=30;i++){
+    if(i%3==0){
+        document.writeln("Fizz");
+    }else if (i%5==0){
+        document.writeln("Buzz");
+    }else if (i%3==0 && i%5==0){
+        document.writeln("FizzBuzz");
+    }else{
+        document.writeln(i);
+    }
+ }
+   document.writeln("<br><br>");
+
+
+ //17
+ //*
+// **
+// ***
+// ****
+// *****
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        document.writeln("*");
+    }
+    document.writeln("<br>");
+}
+  document.writeln("<br><br>");
+
+//18
+// *****
+// ****
+// ***
+// **
+// *
+for(let i=5;i>=1;i--){
+    for(let j=1;j<=i;j++){
+        document.writeln("*");
+    }
+    document.writeln("<br>");
+}
+  document.writeln("<br><br>");
+
+  //19
+// 1
+// 12
+// 123
+// 1234
+// 12345
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        document.writeln(j);
+    }
+    document.writeln("<br>");
+}
+  document.writeln("<br><br>");
+
+ //20
+//  1
+// 22
+// 333
+// 4444
+// 55555
+
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        document.writeln(i);
+    }
+    document.writeln("<br>");
+}
+  document.writeln("<br><br>");
