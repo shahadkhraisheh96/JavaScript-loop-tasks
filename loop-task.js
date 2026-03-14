@@ -1,5 +1,5 @@
 //Create a script that displays numbers from 1 to 10 on one line separated by a dash (-).
-
+document.writeln("<h1>Q1</h1>");
 for(let i=0;i<=10;i++){
     document.writeln(i+'-');
 }
@@ -7,6 +7,7 @@ document.writeln("<br>");
 
 
 //Create a script using a for loop to add all integers between 0 and 30 and display the total.
+document.writeln("<h1>Q2</h1>");
 let total2=0;
 for(let i=0;i<=30;i++){
     total2=total2+i;
@@ -15,6 +16,7 @@ document.writeln(`<p>total2 = ${total2}</p>`);
 document.writeln("<br>");
 
 //Write a program that prints all even numbers from 1 to 50 using a loop.
+document.writeln("<h1>Q3</h1>");
 for(let i=1;i<=50;i++){
     if(i%2==0){
         document.writeln(i+" ");
@@ -23,7 +25,9 @@ for(let i=1;i<=50;i++){
 
 document.writeln("<br><br>");
 
-//Write a program that prints numbers from 10 down to 1 using a loop.
+//Write a program that prints numbers from 10 down to 1 using a loop
+
+document.writeln("<h1>Q4</h1>");
 for(let i=10;i>=1;i--){
     document.writeln(i+" ");
 }
@@ -31,6 +35,7 @@ for(let i=10;i>=1;i--){
 document.writeln("<br><br>");
 
 //Create a script to generate the following pattern using nested for loops.
+document.writeln("<h1>Q5</h1>");
 const size1=5;
 for(let row=0;row<size1;row++){
 let line="";
@@ -48,6 +53,7 @@ let line="";
 document.writeln("<br><br>");
 
 //6
+document.writeln("<h1>Q6</h1>");
 const size2=5;
 for(let row=1;row<=size1;row++){
 let line="";
@@ -65,7 +71,7 @@ let line="";
 document.writeln("<br><br>");
 
 //7
-
+document.writeln("<h1>Q7</h1>");
 const size3=5;
 for(let row=1;row<=size1;row++){
 let line="";
@@ -82,6 +88,7 @@ let line="";
 document.writeln("<br><br>");
 
 //8
+document.writeln("<h1>Q8</h1>");
 let factorialnum=1;
 for(let i=1;i<=5;i++){
     factorialnum =factorialnum*i;
@@ -311,13 +318,19 @@ for(let i=1;i<=5;i++){
 
   } document.writeln("<br><br>");
 
-  //27Write a program that prints numbers between 1 and 500 where the reverse of the number is also divisible by 3.
-  for (let i=1;i<=100;i++){
+  //27Write a program that prints numbers between 1 and 200 where the difference between digits equals 2.
+ document.writeln("<h1>Q27</h1>");
+  for (let i=1;i<=200;i++){
     let numToString=String(i);
     let firstdigit=parseInt(numToString[0]);
-    let lastdigit=parseInt(numToString[1]);
-    if(lastdigit-firstdigit==2 ){
+    let seconddigit=parseInt(numToString[1]);
+    let lastdigit=parseInt(numToString[2]);
+   
+    if(numToString.length==2 &&Math.abs( firstdigit-seconddigit===2) ){
         document.writeln(i);
+    }else if(numToString.length==3 && Math.abs((firstdigit-seconddigit)-lastdigit)===2){
+        document.writeln(i);
+
     }
 
   } document.writeln("<br><br>");
