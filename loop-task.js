@@ -393,7 +393,7 @@ for (let i=1;i<=500;i++){
 //32Write a program that prints numbers between 1 and 200 where the sum of digits is greater than 10.
 for (let i=1;i<=200;i++){
     let numToString=String(i);
-    let isPrime=true;
+  
     let sumofdigit=0;
    for(let char of numToString){
     sumofdigit +=parseInt(char);
@@ -510,7 +510,7 @@ for(let i=1;i<=500;i++){
     }document.writeln("<br><br>");
 
     //39Write a program that prints numbers between 1 and 500 whose digit sum is divisible by the number of digits.
-    for (let i=1;i<=200;i++){
+    for (let i=1;i<=500;i++){
     let numToString=String(i);
     let sumofdigit=0;
    for(let char of numToString){
@@ -523,3 +523,145 @@ if(sumofdigit%numToString.length==0){
 }document.writeln("<br><br>");
 
 //40Write a program that prints numbers between 1 and 1000 where the sum of digits equals 15.
+for (let i=1;i<=1000;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+
+if(sumofdigit==15){
+    document.writeln(numToString+"  digit sum equals 15.<br>");
+}
+}document.writeln("<br><br>");
+
+//41 Write a program that prints numbers between 1 and 1000 whose digit sum equals their digit product.
+for (let i=1;i<=1000;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+    let productogdigit=1;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+    productogdigit *=parseInt(char);
+   }
+
+if(sumofdigit==productogdigit){
+    document.writeln(numToString+" the sum of digit equal their digit product ="+productogdigit+"<br>");
+}
+}document.writeln("<br><br>");
+
+//42 Write a program that prints numbers between 1 and 1000 whose reverse equals the original number plus 9.
+for(let i=1;i<=1000;i++){
+let revrseNum = parseInt(i.toString().split('').reverse().join(''));
+if((i+9)===revrseNum){
+    document.writeln(revrseNum+"reverse equals the original number plus 9."+(i+9)+"<br>")
+}
+
+}document.writeln("<br><br>");
+//43Write a program that prints numbers between 1 and 1000 whose square ends with the same number.
+for (let i = 1; i <= 1000; i++) {
+
+    let square =Math.pow(i,2);
+
+    let strNum = i.toString();
+    let strSquare = square.toString();
+
+    if (strSquare.endsWith(strNum)) {
+        document.writeln(`Number: ${i} square ends with the same number: ${square} <br>`);
+    }
+}document.writeln("<br><br>");
+//44Write a program that prints numbers between 1 and 1000 where the difference between the number and its reverse is divisible by 9.
+for(let i=1;i<=1000;i++){
+let revrseNum = parseInt(i.toString().split('').reverse().join(''));
+let difference=revrseNum-i;
+if(difference%9===0 && difference>0){
+    document.writeln(revrseNum+"difference between the number and its reverse is divisible by 9.<br>");
+}
+
+}document.writeln("<br><br>");
+
+//45Write a program that prints numbers between 1 and 1000 where the sum of digits equals the reverse of the number of digits.
+for (let i = 1; i <= 1000; i++) {
+    let numStr = i.toString();
+    let countOfDigits = numStr.length;
+    let reversedCount = parseInt(countOfDigits.toString().split('').reverse().join(''));
+    let sumOfDigits = 0;
+    for (let char of numStr) {
+        sumOfDigits += parseInt(char);
+    }
+
+    if (sumOfDigits === reversedCount) {
+        document.writeln(`Number: ${i}  Digits: ${countOfDigits}  Sum: ${sumOfDigits} <br>`);
+    }
+}document.writeln("<br><br>");
+
+//46 Write a program that prints numbers between 1 and 1000 where the digit sum squared equals the number.
+for (let i=1;i<=1000;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+
+if(Math.pow(sumofdigit,2)==i){
+    document.writeln(numToString+" the digit sum squared equals the number."+sumofdigit+"<br>");
+}
+}document.writeln("<br><br>");
+//47 Write a program that prints numbers between 1 and 1000 where the sum of the cubes of the digits equals the number.
+for (let i=1;i<=1000;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=Math.pow(parseInt(char),3);
+   }
+
+if(sumofdigit==i){
+    document.writeln(sumofdigit+" tthe sum of the cubes of the digits equals the number"+i+"<br>");
+}
+}document.writeln("<br><br>");
+
+//48Write a program that prints numbers between 1 and 1000 where the reverse number is a prime number.
+for(let i=1;i<=1000;i++){
+let revrseNum = parseInt(i.toString().split('').reverse().join(''));
+    let isPrime=true;
+
+  if(revrseNum<2){
+    isPrime=false;
+   }else{
+    for(let j=2;j<=Math.sqrt(revrseNum);j++){
+        if(revrseNum%j===0){
+            isPrime=false;
+            break;
+        }
+    }
+    }
+    if(isPrime){
+    document.writeln("the number "+revrseNum+"is prime <br>");}
+
+}document.writeln("<br><br>");
+
+//49Write a program that prints numbers between 1 and 1000 where the product of digits equals the square of the digit sum.
+for (let i=1;i<=1000;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+    let productogdigit=1;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+    productogdigit *=parseInt(char);
+   }
+
+if(Math.pow(sumofdigit,2)==productogdigit){
+    document.writeln(numToString+"  the product of digits equals the square of the digit sum.<br>");
+}
+}document.writeln("<br><br>");
+
+//50 Write a program that prints numbers between 1 and 1000 where the reverse of the number multiplied by the original number ends with 1.
+for(let i=1;i<=1000;i++){
+   
+let revrseNum = parseInt(i.toString().split('').reverse().join(''));
+let multiplication=String(i*revrseNum);
+if(multiplication[multiplication.length-1]==1){
+    document.writeln(multiplication+" the reverse of the number multiplied by the original number ends with 1.<br>");
+}
+
+}
