@@ -233,3 +233,293 @@ for(let i=1;i<=5;i++){
     document.writeln("<br>");
 }
   document.writeln("<br><br>");
+
+
+  //21Write a program that prints numbers between 1 and 200 whose digit sum equals 5.
+
+  for (let i=1;i<=200;i++){
+    let sum=0;
+    let numToString=String(i);
+    for(let j=0;j<numToString.length;j++){
+        sum+=parseInt(numToString[j]);
+    }
+    if(sum===5){
+        document.writeln(i);
+    }
+
+  } document.writeln("<br><br>");
+
+  //22Write a program that prints numbers between 1 and 100 where the first digit is greater than the last digit.
+
+ for (let i=1;i<=100;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[numToString.length-1]);
+    if(firstdigit>lastdigit){
+        document.writeln(i);
+    }
+
+  } document.writeln("<br><br>");
+
+  //23Write a program that prints numbers from 1 to 100 whose digits are the same.
+  for (let i=1;i<=100;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[1]);
+    if(firstdigit==lastdigit ){
+        document.writeln(i);
+    }
+
+  } document.writeln("<br><br>");
+
+  //24Write a program that prints numbers from 1 to 300 that are divisible by the product of their digits.
+  for (let i=1;i<=300;i++){
+    let numToString=String(i);
+    let  digitalproduct=1;
+    for(let j=0;j<=numToString.length-1;j++){
+        digitalproduct*=parseInt(numToString[j]);
+  }
+  if(parseInt(numToString)%digitalproduct==0){
+    document.writeln(numToString);
+  }
+
+  } document.writeln("<br><br>");
+
+  //25Write a program that prints numbers between 1 and 100 where the digit sum equals the digit product.
+   for (let i=1;i<=300;i++){
+    let numToString=String(i);
+    let  digitalproduct=1;
+    let digitsum=0;
+    for(let j=0;j<=numToString.length-1;j++){
+        digitalproduct*=parseInt(numToString[j]);
+         digitsum+=parseInt(numToString[j]);
+        
+  }
+  if(digitalproduct==digitsum){
+    document.writeln(numToString);
+  }
+
+  } document.writeln("<br><br>");
+
+  //26 Write a program that prints numbers between 1 and 500 where the reverse of the number is also divisible by 3.
+    for (let i=1;i<=500;i++){
+    let reversenum=String(i).split('').reverse().join('');
+   
+  if(parseInt(reversenum)%3==0){
+    document.writeln(reversenum);
+  }
+
+  } document.writeln("<br><br>");
+
+  //27Write a program that prints numbers between 1 and 500 where the reverse of the number is also divisible by 3.
+  for (let i=1;i<=100;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[1]);
+    if(lastdigit-firstdigit==2 ){
+        document.writeln(i);
+    }
+
+  } document.writeln("<br><br>");
+
+  //28 Write a program that prints numbers between 1 and 500 whose digits are in ascending order.
+   for (let i=1;i<=500;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[2]);
+    let secondedigit=parseInt(numToString[1]);
+    if(numToString.length==2 && firstdigit==(secondedigit-1)){
+        document.writeln(numToString);
+    }
+    else if(numToString.length==3&&(firstdigit+2)==(secondedigit+1)&&(secondedigit)==(lastdigit-1)){
+             document.writeln(i);
+  
+    }
+
+  } document.writeln("<br><br>");
+
+  //29 Write a program that prints numbers between 1 and 500 whose digits are in descending order.
+ for (let i=1;i<=500;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[2]);
+    let secondedigit=parseInt(numToString[1]);
+    if(numToString.length==2 && firstdigit-1==(secondedigit)){
+        document.writeln(numToString);
+    }
+    else if(numToString.length==3&&(firstdigit-2)==(secondedigit-1)&&(secondedigit-1)==(lastdigit)){
+             document.writeln(i);
+  
+    }
+
+  } document.writeln("<br><br>");
+
+  //30 Write a program that prints numbers between 1 and 300 where the last digit equals the sum of the other digits.
+for (let i=1;i<=500;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[2]);
+    let secondedigit=parseInt(numToString[1]);
+    let sumtwodigit=firstdigit+secondedigit;
+
+    if(numToString.length==3 && sumtwodigit==lastdigit){
+        document.writeln(i);
+    }
+}document.writeln("<br><br>");
+
+//31 Write a program that prints numbers between 1 and 500 whose digit sum is a prime number.
+for (let i=1;i<=500;i++){
+    let numToString=String(i);
+    let isPrime=true;
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+   if(sumofdigit<2){
+    isPrime=false;
+   }else{
+    for(let j=2;j<=Math.sqrt(sumofdigit);j++){
+        if(sumofdigit%j===0){
+            isPrime=false;
+            break;
+        }
+    }
+    }
+    if(isPrime){
+    document.writeln("the number "+sumofdigit+"is prime <br>");}
+   
+}document.writeln("<br><br>");
+
+//32Write a program that prints numbers between 1 and 200 where the sum of digits is greater than 10.
+for (let i=1;i<=200;i++){
+    let numToString=String(i);
+    let isPrime=true;
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+
+if(sumofdigit>10){
+    document.writeln(sumofdigit+"is grater than 10 <br>");
+}
+}document.writeln("<br><br>");
+
+//33Write a program that prints numbers between 1 and 300 that contain exactly two digits equal to each other.
+for (let i=1;i<300;i++){
+    let numToString=String(i);
+    let firstdigit=parseInt(numToString[0]);
+    let lastdigit=parseInt(numToString[2]);
+    let secondedigit=parseInt(numToString[1]);
+    if(firstdigit==secondedigit || firstdigit==lastdigit || secondedigit==lastdigit){
+        document.writeln(i);
+    }
+}document.writeln("<br><br>");
+
+//34 Write a program that prints numbers between 1 and 200 where the reverse of the number is greater than the original number.
+for(let i=1;i<=200;i++){
+     let numToString=String(i);
+    let firstdigit=numToString[0];
+    let lastdigit=numToString[2];
+    let secondedigit=numToString[1];
+    let reverseNum;
+    if(numToString.length==2){
+        let temp=firstdigit;
+        firstdigit=secondedigit;
+        secondedigit=temp;
+        reverseNum=parseInt(firstdigit+secondedigit);
+
+    }else if(numToString.length==3){
+          let temp=firstdigit;
+        firstdigit=secondedigit;
+        secondedigit=lastdigit;
+        lastdigit=temp
+        reverseNum=parseInt(firstdigit+secondedigit+lastdigit);
+    }
+    if(reverseNum>i){
+        document.writeln(reverseNum+" is greater than the orignal number "+i+"<br>");
+    }
+}document.writeln("<br><br>");
+//for(let i=1;i<=100;i++){
+//let revrseNum = parseInt(i.toString().split('').reverse().join(''));
+//  if(reverseNum>i){
+    //    document.writeln(reverseNum+" is greater than the orignal number "+i+"<br>");
+   // }
+//}
+
+//35 Write a program that prints numbers between 1 and 500 whose digit product is divisible by 5.
+for (let i=1;i<=200;i++){
+    let numToString=String(i);
+    
+    let productofdigit=1;
+   for(let char of numToString){
+    productofdigit *=parseInt(char);
+   }
+
+if(productofdigit!==0 && productofdigit%5==0){
+    document.writeln(productofdigit+"is divisible by 5 <br>");
+}
+}document.writeln("<br><br>");
+//36Write a program that prints numbers between 1 and 300 where the sum of digits equals the number of digits multiplied by 5.
+for (let i=1;i<=200;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+
+if((numToString.length*5)==sumofdigit){
+    document.writeln(sumofdigit+"is equal to the "+(numToString.length*5)+"<br>");
+}
+}document.writeln("<br><br>");
+
+//37Write a program that prints numbers between 1 and 500 whose reverse number is even.
+for(let i=1;i<=500;i++){
+     let numToString=String(i);
+    let firstdigit=numToString[0];
+    let lastdigit=numToString[numToString.length-1];
+    let secondedigit=numToString[1];
+    let reverseNum;
+    if(numToString.length==2){
+        let temp=firstdigit;
+        firstdigit=secondedigit;
+        secondedigit=temp;
+        reverseNum=parseInt(firstdigit+secondedigit);
+
+    }else if(numToString.length==3){
+          let temp=firstdigit;
+        firstdigit=lastdigit;
+        lastdigit=temp;
+        reverseNum=parseInt(firstdigit+secondedigit+lastdigit);
+    }
+    if(reverseNum%2==0){
+        document.writeln(reverseNum+" is even number <br>");
+    }
+}document.writeln("<br><br>");
+
+//38Write a program that prints numbers between 1 and 300 where the square of the last digit equals the first digit.
+for(let i=1;i<=500;i++){
+     let numToString=String(i);
+     let firstDigit=numToString[0];
+     let lastdigit=numToString[numToString.length-1];
+
+     if(lastdigit*lastdigit==firstDigit){
+        document.writeln(numToString+"the  the square of the last digit equals the first digit. <br>");
+     }
+
+
+    }document.writeln("<br><br>");
+
+    //39Write a program that prints numbers between 1 and 500 whose digit sum is divisible by the number of digits.
+    for (let i=1;i<=200;i++){
+    let numToString=String(i);
+    let sumofdigit=0;
+   for(let char of numToString){
+    sumofdigit +=parseInt(char);
+   }
+
+if(sumofdigit%numToString.length==0){
+    document.writeln(numToString+"  digit sum "+sumofdigit+"is divisible by the number of digits.<br>");
+}
+}document.writeln("<br><br>");
+
+//40Write a program that prints numbers between 1 and 1000 where the sum of digits equals 15.
