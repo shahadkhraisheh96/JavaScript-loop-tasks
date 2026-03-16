@@ -381,6 +381,7 @@ for (let i=1;i<=500;i++){
 }document.writeln("<br><br>");
 
 //31 Write a program that prints numbers between 1 and 500 whose digit sum is a prime number.
+document.writeln("<h1>Q32</h1>");
 for (let i=1;i<=500;i++){
     let numToString=String(i);
     let isPrime=true;
@@ -399,7 +400,7 @@ for (let i=1;i<=500;i++){
     }
     }
     if(isPrime){
-    document.writeln("the number "+sumofdigit+"is prime <br>");}
+    document.writeln("the number "+sumofdigit+"is prime number <br>");}
    
 }document.writeln("<br><br>");
 
