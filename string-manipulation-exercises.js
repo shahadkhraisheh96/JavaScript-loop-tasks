@@ -112,5 +112,33 @@ for(let char of s025){
 }
 console.log(Object.fromEntries(charmap));
 
-//26 
+//26  Replace Vowels with Numbers
+let s026="Hello World";
+const vowels=[
+    ["a","1"],
+    ["e","2"],
+    ["i","3"],
+    ["o","4"],
+    ["u","5"]
+];
+vowels.forEach(([find,replace]) => {
+    s026=s026.replaceAll(find,replace);
+});
+console.log(s026);
+
+//27 startsWith
+let s027="JavaScript is fun";
+console.log(s027.toLowerCase().startsWith("java"));
+
+//28 endsWith
+let s028="image.png";
+console.log(s028.endsWith("png"));
+
+//29 repeat
+let s029="ha";
+console.log(s029.repeat(3));
+
+//30 indexOf
+let s030="Hello World";
+console.log(s030.indexOf("o"));
 
