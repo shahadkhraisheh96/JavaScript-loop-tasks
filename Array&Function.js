@@ -206,6 +206,68 @@ console.log(reverseWithoutReverse( [1, 2, 3, 4, 5]));
 
 //26 findMissingNumber(arr) 
 function findMissingNumber(arr){
-    arr.sort((a,b)=> a-b);
-  
+let missingNum=[];
+    arr.sort((a,b) => a - b);
+    for(let i=0;i<arr.length-1;i++){
+        let gap=(arr[i+1] - arr[i] -1) 
+        if(gap>0){
+        for(let n=1;n<=gap;n++){
+            missingNum.push(i+n+1);
+        } 
+        }
+         
+      
+    }
+     return missingNum;
 }
+console.log(findMissingNumber([1, 2, 7, 5, 6]));
+
+//27 pairSum(arr,target)
+function pairSum(arr,target){
+   for (let i=0;i< arr.length ;i++){
+    let complement=target-arr[i];
+
+    if(arr.slice(i+1).includes(complement)){
+        return[arr[i],complement];
+    }
+   }
+   return null;
+}
+console.log(pairSum([2,7,11,15],9));
+
+//28 rotateArray(arr,steps)
+function rotateArray(arr,steps){
+    let movearray=arr.slice(0,steps+1);
+    let restarray=arr.slice(steps+1);
+
+    return restarray.concat(movearray);
+
+}
+console.log(rotateArray([1,2,3,4,5],2));
+
+//29 chunkArray(arr,size)
+let chunks=[];
+function chunkArray(arr,size){
+    for(let i=0; i<arr.length; i+=size){
+      chunks.push(arr.slice(i,i+size));
+
+    }
+    return chunks;
+
+}
+console.log(chunkArray([1,2,3,4,5,6],2));
+
+//30 groupByLength(arr)
+function groupByLength(arr) {
+  let counter = {};
+  for (item of arr) {
+    len = item.length;
+    if (len in counter) {
+      counter[len].push(item);
+    } else {
+      counter[len] = [item];
+    }
+  }
+  return counter;
+}
+console.log(groupByLength(["hi","cat","dog","apple"]));
