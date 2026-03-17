@@ -159,3 +159,195 @@ function squareNumbers(arr){
 function firstLetters(arr){
  return arr.map(name => name.charAt(0));
 }console.log(firstLetters(["Ali","Sara"]));
+
+
+/*
+ * Exercise 11
+ *
+ * Count total sum using forEach
+ *
+ * Test Case:
+ * console.log(sumNumbers([10,20,30]))
+ *
+ * Result:
+ * 60
+*/
+function sumNumbers(arr){
+    let sum=0;
+    arr.forEach(num => {
+        sum+=num;  
+    });
+    return sum;
+
+}console.log(sumNumbers([10,20,30]));
+
+/*
+ * Exercise 12
+ *
+ * Count how many numbers are even
+ *
+ * Test Case:
+ * console.log(countEven([1,2,3,4]))
+ *
+ * Result:
+ * 2
+*/
+function countEven(arr){
+  let count=0;
+    arr.forEach(num => {
+        if(num %2==0){
+            count ++
+        }
+    });
+    return count;
+} console.log(countEven([1,2,3,4]));
+
+/*
+ * Exercise 13
+ *
+ * Create array where each number becomes number * 10
+ *
+ * Test Case:
+ * console.log(timesTen([1,2,3]))
+ *
+ * Result:
+ * [10,20,30]
+*/
+function timesTen(arr){
+  return arr.map(num => num*10);
+}console.log(timesTen([1,2,3]));
+
+/*
+ * Exercise 14
+ *
+ * Add property "adult" depending on age
+ *
+ * Test Case:
+ * console.log(addAdult([
+ * {name:"Ali",age:20},
+ * {name:"Sara",age:15}
+ * ]))
+ *
+ * Result:
+ * [
+ * {name:"Ali",age:20,adult:true},
+ * {name:"Sara",age:15,adult:false}
+ * ]
+*/
+function addAdult(arr){
+return arr.map((obj) => ({...obj , adult: obj.age > 18 }) );
+}
+console.log(addAdult([
+  {name:"Ali",age:20},
+  {name:"Sara",age:15}
+  ]));
+
+ /*
+ * Exercise 15
+ *
+ * Create array of prices after adding 10 tax
+ *
+ * Test Case:
+ * console.log(addTax([100,200]))
+ *
+ * Result:
+ * [110,210]
+*/
+function addTax(arr){
+   let taxArray=arr.map(num => num+10);
+   return taxArray;
+} console.log(addTax([100,200]));
+
+/*
+ * Exercise 16
+ *
+ * Count how many numbers are greater than 50
+ *
+ * Test Case:
+ * console.log(countBig([20,60,80]))
+ *
+ * Result:
+ * 2
+*/
+function countBig(arr){
+    let count=0;
+    arr.forEach(num => {
+        if(num > 50){
+            count ++
+        }
+    });
+    return count;
+
+}console.log(countBig([20,60,80]));
+
+/*
+ * Exercise 17
+ *
+ * Convert numbers to "Number: X"
+ *
+ * Test Case:
+ * console.log(labelNumbers([5,10]))
+ *
+ * Result:
+ * ["Number: 5","Number: 10"]
+*/
+function labelNumbers(arr){
+   return arr.map(item => `Number:${item}`); 
+
+}console.log(labelNumbers([5,10]));
+
+
+/*
+ * Exercise 18
+ *
+ * Get product names
+ *
+ * Test Case:
+ * console.log(productNames([
+ * {product:"Laptop",price:1000},
+ * {product:"Phone",price:500}
+ * ]))
+ *
+ * Result:
+ * ["Laptop","Phone"]
+*/
+function productNames(arr){
+    return arr.map(obj => obj.product);
+
+}console.log(productNames([
+ {product:"Laptop",price:1000},
+  {product:"Phone",price:500}
+  ]));
+
+  /*
+ * Exercise 19
+ *
+ * Create array where each number becomes number + index
+ *
+ * Test Case:
+ * console.log(addIndex([5,5,5]))
+ *
+ * Result:
+ * [5,6,7]
+*/
+function addIndex(arr){
+  return arr.map((num , index) => num+index) ;
+
+}console.log(addIndex([5,5,5]));
+ 
+/*
+ * Exercise 20
+ *
+ * Create array of boolean values (true if even)
+ *
+ * Test Case:
+ * console.log(isEvenArray([1,2,3,4]))
+ *
+ * Result:
+ * [false,true,false,true]
+*/
+function isEvenArray(arr){
+    let evenOrOdd=arr.map(num => num %2===0);
+    return evenOrOdd;
+
+}console.log(isEvenArray([1,2,3,4]))
